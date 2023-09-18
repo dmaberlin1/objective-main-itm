@@ -14,22 +14,17 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) {
-        // напишите тут ваш код
+        final int  arrLength=500_000;
+        for (int i = 0; i < arrLength; i++) {
+            String name="pet"+i;
+            Dog dog = new Dog(name);
+            Cat cat = new Cat(name);
+            System.out.println(dog.getName());
+            System.out.println(cat.getName());
+        }
+
     }
 }
 
-class Cat {
-    @Override
-    protected void finalize() throws Throwable {
-        super.finalize();
-        System.out.println("A Cat was destroyed");
-    }
-}
 
-class Dog {
-    @Override
-    protected void finalize() throws Throwable {
-        super.finalize();
-        System.out.println("A Dog was destroyed");
-    }
-}
+

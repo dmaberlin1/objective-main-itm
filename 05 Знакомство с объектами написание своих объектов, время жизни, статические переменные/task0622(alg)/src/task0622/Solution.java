@@ -2,6 +2,8 @@ package task0622;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Iterator;
+import java.util.TreeSet;
 
 /* 
 Числа по возрастанию
@@ -32,7 +34,16 @@ Requirements:
 public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        TreeSet<Integer>treeSet=new TreeSet<>();
+        System.out.println("введите пять чисел подряд,  число + Enter");
+        for(int i=1;i<=5;i++){
+            System.out.println("введите число "+i);
+            treeSet.add(Integer.parseInt(reader.readLine()));
+        }
+        for (Integer integer : treeSet) {
+            System.out.print(integer+" ");
+        }
 
-        //напишите тут ваш код
+
     }
 }

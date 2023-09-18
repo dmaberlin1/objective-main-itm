@@ -14,11 +14,15 @@ Requirements:
 5. Метод getDistance должен использовать метод double Math.sqrt(double a).*/
 
 public class Util {
+
+
     public static double getDistance(int x1, int y1, int x2, int y2) {
-        //напишите тут ваш код
+        int deltaX=x2-x1;
+        int deltaY=y2-y1;
+        int sumOfSquares=deltaX*deltaX+deltaY*deltaY;
+        double distance=Math.sqrt(sumOfSquares);
+        return distance;
     }
 
-    public static void main(String[] args) {
 
-    }
 }

@@ -24,11 +24,10 @@ Requirements:
 5. Выведенный текст должен соответствовать заданию.*/
 
 public class Solution {
-
-    public static int even;
-    public static int odd;
-
     public static void main(String[] args) throws IOException {
-        //напишите тут ваш код
+        ScanEvenOrOdd scanEvenOrOdd = new ScanEvenOrOdd();
+
+        scanEvenOrOdd.getEvenOrOdd();
+        scanEvenOrOdd.getInfo();
     }
 }

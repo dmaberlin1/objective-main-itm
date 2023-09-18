@@ -21,17 +21,11 @@ public class Cat {
         catCount++;
     }
 
-    public static int getCatCount() {
-        //напишите тут ваш код
-
+    public int getCatCount() {
+        return catCount;
     }
 
-    public static void setCatCount(int catCount) {
-        //напишите тут ваш код
-
-    }
-
-    public static void main(String[] args) {
-
+    public void setCatCount(int catCount) {
+        Cat.catCount = catCount;
     }
 }

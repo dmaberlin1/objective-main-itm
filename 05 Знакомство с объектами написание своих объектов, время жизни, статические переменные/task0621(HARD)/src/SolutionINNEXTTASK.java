@@ -1,10 +1,7 @@
-package task0621;
-
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
-/* 
+/*
 Родственные связи кошек
 Задача: У каждой кошки есть имя и кошка-мама.
 Создать класс, который бы описывал данную ситуацию.
@@ -44,39 +41,77 @@ Requirements:
 8. Строка про сына (пятая) должна соответствовать условию.
 9. Строка про дочь (шестая) должна соответствовать условию.*/
 
-public class Solution {
-    public static void main(String[] args) throws IOException {
+
+import java.io.IOException;
+
+public class SolutionRunner
+{
+    public static void main(String[] args) throws IOException
+    {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        String fatherName = reader.readLine();
+        Cat catFather = new Cat(fatherName);
 
         String motherName = reader.readLine();
         Cat catMother = new Cat(motherName);
 
-        String daughterName = reader.readLine();
-        Cat catDaughter = new Cat(daughterName, catMother);
+        String sonName = reader.readLine();
+        Cat catSon = new Cat(sonName, catFather, null);
 
+        String daughterName = reader.readLine();
+        Cat catDaughter = new Cat(daughterName, null, catMother);
+
+        String gSonName = reader.readLine();
+        Cat catGSon = new Cat(gSonName, catSon, catDaughter);
+
+        String gDaughterName = reader.readLine();
+        Cat catGDaughter = new Cat(gDaughterName, catSon, catDaughter);
+
+        System.out.println(catFather);
         System.out.println(catMother);
+        System.out.println(catSon);
         System.out.println(catDaughter);
+        System.out.println(catGSon);
+        System.out.println(catGDaughter);
+
     }
 
-    public static class Cat {
+    public static class Cat
+    {
         private String name;
-        private Cat parent;
+        private Cat mother;
+        private Cat father;
 
-        Cat(String name) {
+        Cat(String name)
+        {
             this.name = name;
         }
 
-        Cat(String name, Cat parent) {
+        Cat(String name, Cat mother)
+        {
             this.name = name;
-            this.parent = parent;
+            this.mother = mother;
+        }
+
+        Cat(String name, Cat father, Cat mother)
+        {
+            this.name = name;
+            this.father = father;
+            this.mother = mother;
         }
 
         @Override
-        public String toString() {
-            if (parent == null)
-                return "The cat's name is " + name + ", no mother ";
+        public String toString()
+        {
+            if (mother == null && father == null)
+                return "Cat name is " + name + ", no mother, no father";
+            else if (mother == null)
+                return "Cat name is " + name + ", no mother, father is " + father.name;
+            else if (father == null)
+                return "Cat name is " + name + ", mother is " + mother.name + ", no father";
             else
-                return "The cat's name is " + name + ", mother is " + parent.name;
+                return "Cat name is " + name + ", mother is " + mother.name + ", father is " + father.name;
         }
     }
 
