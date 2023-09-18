@@ -30,17 +30,14 @@ public class Circle {
     }
 
     public Circle(double x, double y) {
-        //напишите тут ваш код
+        this.x = x;
+        this.y = y;
+        this.radius=10;
     }
 
     public Circle() {
-        this(5, 5, 1);
+        this(5, 5, 15);
     }
 
-    public static void main(String[] args) {
-        Circle circle = new Circle();
-        System.out.println(circle.x + " " + circle.y + " " + circle.radius);
-        Circle anotherCircle = new Circle(10, 5);
-        System.out.println(anotherCircle.x + " " + anotherCircle.y + " " + anotherCircle.radius);
-    }
+
 }

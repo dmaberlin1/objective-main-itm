@@ -18,10 +18,19 @@ Requirements:
 7. В методе main необходимо создать по два объекта каждого типа.
 8. Метод main должен выводить созданные объекты на экран в указанном формате.*/
 
-public class Solution {
-    public static void main(String[] args) {
-        //напишите тут ваш код
-    }
+import task0526.Human.Man;
+import task0526.Human.Woman;
 
-    //напишите тут ваш код
+public class SolutionRunner {
+    public static void main(String[] args) {
+        Man scott = new Man("Scott", 30, "NY,Bann str.50");
+        Man bill = new Man("Bill", 30, "NY,Wall str.90");
+        Woman tereza = new Woman("Tereza", 31, "NY,Wall str. 60");
+        Woman rebekka = new Woman("Rebekka", 31, "Florida,Carpa str. 3");
+
+        System.out.println("rebekka.getAge() = " + rebekka.getAge());
+        System.out.println("rebekka.toString() = " + rebekka);
+        System.out.println(rebekka.getGender());
+
+    }
 }

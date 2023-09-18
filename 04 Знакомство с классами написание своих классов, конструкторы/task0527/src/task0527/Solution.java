@@ -23,22 +23,17 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) {
-        Mouse jerryMouse = new Mouse("Jerry", 12, 5);
+        Dog aslor = new Dog(100, 20, true, "Red", "Aslor");
+        Dog bully = new Dog(140, 25, false, "white", "bully", "Hii,  i am small bully =)");
+        Cat timmy = new Cat(150, 20, true, "black", "Timmy", "I am small cat myr myr");
+        Mouse tom = new Mouse(70,12,false,"grey","tom");
+        timmy.say("mur mur");
+        bully.say("gaw gaw");
 
-        //напишите тут ваш код
+
     }
 
-    public static class Mouse {
-        String name;
-        int height;
-        int tail;
 
-        public Mouse(String name, int height, int tail) {
-            this.name = name;
-            this.height = height;
-            this.tail = tail;
-        }
-    }
 
     //напишите тут ваш код
 }

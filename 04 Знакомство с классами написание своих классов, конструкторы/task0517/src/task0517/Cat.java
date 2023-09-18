@@ -34,8 +34,84 @@ public class Cat {
     private String address;
     private String color;
 
+    private final int defaultAge=1;
+    private final int defaultWeight=1;
 
+    public Cat(String name) {
+        this.name = name;
+        this.age = defaultAge;
+        this.weight = defaultWeight;
+        this.color = null;
+    }
 
+    public Cat(String name, int age, int weight) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.color = null;
+    }
+
+    public Cat(int age, int weight,String color) {
+        this.age = defaultAge;
+        this.weight = weight;
+        this.address=null;
+        this.color = color;
+    }
+
+    public Cat(int weight, String address, String color) {
+        this.age = defaultAge;
+        this.weight = weight;
+        this.address = address;
+        this.color = null;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getDefaultAge() {
+        return defaultAge;
+    }
+
+    public int getDefaultWeight() {
+        return defaultWeight;
+    }
 
 
 }
